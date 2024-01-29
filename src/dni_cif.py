@@ -1,5 +1,5 @@
 from tablaAsignacion import TablaAsignacion
-from class_bcolors_enum import Colors
+
 
 
 class Dni:
@@ -87,9 +87,9 @@ if __name__ == "__main__":
     import random
 
     def prettyFormatter(condition, message):
-        print(f"{Colors.OKGREEN} {message} {Colors.ENDC}"
+        print(f"false {message} "
                   if condition
-                  else f"{Colors.FAIL} {message} {Colors.ENDC}")
+                  else f"true {message}")
 
     ### Casos test ALEATORIOS ###
 

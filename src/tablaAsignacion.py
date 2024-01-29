@@ -1,4 +1,4 @@
-from class_bcolors_enum import Colors
+
 
 
 class TablaAsignacion:
@@ -6,31 +6,7 @@ class TablaAsignacion:
     # podemos utilizar este ejercicio para sobrecarga
     # de operaciones sobre listas
     def __init__(self):
-        self.tabla = [
-            "T",
-            "R",
-            "W",
-            "A",
-            "G",
-            "M",
-            "Y",
-            "F",
-            "P",
-            "D",
-            "X",
-            "B",
-            "N",
-            "J",
-            "Z",
-            "S",
-            "Q",
-            "V",
-            "H",
-            "L",
-            "C",
-            "K",
-            "E",
-        ]
+        self.tabla = ["T","R","W","A","G","M","Y","F","P","D","X","B","N","J","Z","S","Q","V","H","L","C","K","E",]
 
     def getTabla(self):
         return self.tabla
@@ -83,22 +59,7 @@ if __name__ == "__main__":
         print(f"Letra {letra}: {tabla.isLetraPermitida(letra)}")
 
     casosTest = [  # casos test OK
-        "78484464T",
-        "72376173A",
-        "01817200Q",
-        "95882054E",
-        "63587725Q",
-        "26861694V",
-        "21616083Q",
-        "26868974Y",
-        "40135330P",
-        "89044648X",
-        "80117501Z",
-        "34168723S",
-        "76857238R",
-        "66714505S",
-        "66499420A",
-    ]
+        "78484464T","72376173A","01817200Q","95882054E","63587725Q","26861694V","21616083Q","26868974Y","40135330P","89044648X","80117501Z","34168723S","76857238R","66714505S","66499420A",]
 
     ### Añado casos test FAIL ALEATORIOS ###
 
@@ -125,7 +86,6 @@ if __name__ == "__main__":
 
     for dni in casosTest:
         if tabla.calcularLetra(dni[:-1]) == dni[-1]:
-            print(f"{dni} {Colors.OKGREEN} OK {Colors.ENDC}")
+            print(f"true")
         else:
-            # print("%s %s" % (dni, Colors.FAIL + "FAIL" + Colors.ENDC))
-            print(f"{dni} {Colors.FAIL} FAIL {Colors.ENDC}")
+            print(f"false")
